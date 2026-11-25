@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <!-- =========================================================
+       SEO VA META MA'LUMOTLAR
+  ========================================================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ubaydullo Ubaydullayev — Web Dasturchi Portfolio</title>
+  <meta name="description" content="Ubaydullo Ubaydullayev — Zamonaviy, tezkor va moslashuvchan veb-saytlar yaratuvchi web dasturchi portfoliosi.">
+  <meta name="keywords" content="Ubaydullo Ubaydullayev, web dasturchi, frontend developer, portfolio, HTML, CSS, JavaScript, Bootstrap, Owl Carousel">
+  <meta name="author" content="Ubaydullo Ubaydullayev">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ubaydullo Ubaydullayev — Web Dasturchi Portfolio">
+  <meta property="og:description" content="Zamonaviy dizayn, toza kod va tezkor ishlashga qaratilgan veb-saytlar yaratuvchi web dasturchi portfoliosi.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ubaydullo-portfolio.netlify.app">
+  <!-- RASM: Open Graph preview rasmi (1200x630) -->
+  <meta property="og:image" content="images/project-bmw.jpg">
+
+  <!-- Favicon -->
+  <!-- RASM: Favicon ikonka (64x64 SVG/PNG) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a0a0a'/><text x='50' y='69' font-size='54' font-family='sans-serif' font-weight='700' fill='%23ffffff' text-anchor='middle'>U</text></svg>">
+
+  <!-- =========================================================
+       GOOGLE FONTS (Space Grotesk & Inter)
+  ========================================================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- =========================================================
+       CDN KUTUBXONALAR (Bootstrap 5, Font Awesome, Owl Carousel)
+  ========================================================= -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Asosiy uslub fayli -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="90" tabindex="0">
+
+  <!-- =========================================================
+       PRELOADER (SAHIFA YUKLANISH ANIMATSIYASI)
+  ========================================================= -->
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-box">
+      <span class="preloader-brand">UBAYDULLO</span>
+      <div class="preloader-track">
+        <div class="preloader-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       MAXSUS KURSOR (DESKTOP UCHUN)
+  ========================================================= -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- =========================================================
+       YUQORI SCROLL PROGRESS CHIZIG'I
+  ========================================================= -->
+  <div class="top-progress" id="topProgress" aria-hidden="true"></div>
+
+  <!-- =========================================================
+       1. NAVBAR
+  ========================================================= -->
+  <nav class="navbar navbar-expand-lg fixed-top site-nav" id="mainNavbar" aria-label="Asosiy menyu">
+    <div class="container">
+      <a class="navbar-brand nav-brand" href="#home">
+        <span class="brand-mark">/</span> Ubaydullo
+      </a>
+
+      <button class="navbar-toggler nav-toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Menyuni ochish">
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#home">Bosh sahifa</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Men haqimda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Ko'nikmalar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Loyihalar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Aloqa</a></li>
+        </ul>
+
+        <div class="d-flex">
+          <a href="#contact" class="btn btn-solid-light btn-gloss">
+            <span>Bog'lanish</span>
+            <i class="fa-solid fa-arrow-up-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================
+       2. HERO BO'LIMI
+  ========================================================= -->
+  <header id="home" class="hero-area d-flex align-items-center">
+    <div class="hero-mesh" aria-hidden="true"></div>
+    <div class="hero-orb orb-left" aria-hidden="true"></div>
+    <div class="hero-orb orb-right" aria-hidden="true"></div>
+
+    <div class="container position-relative z-2">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-9">
+          <div class="hero-pill reveal-hero">
+            <span class="pill-pulse"></span>
+            <span>Yangi veb-loyihalar va hamkorlik uchun ochiqman</span>
+          </div>
+
+          <p class="hero-salutation reveal-hero">Assalomu alaykum, mening ismim</p>
+          <h1 class="hero-name text-gradient reveal-hero">Ubaydullo Ubaydullayev</h1>
+
+          <div class="hero-role reveal-hero">
+            <span class="role-label">Men — </span>
+            <span id="roleRotator" class="role-current"></span>
+            <span class="role-caret">|</span>
+          </div>
+
+          <p class="hero-summary mx-auto reveal-hero">
+            Minimalist va zamonaviy dizayn, toza semantik kod hamda barcha qurilmalarda birdek tez ishlaydigan veb-saytlar yaratuvchi web dasturchiman. G'oyalarni qulay va ta'sirchan raqamli mahsulotlarga aylantiraman.
+          </p>
+
+          <div class="hero-cta d-flex flex-wrap justify-content-center gap-3 reveal-hero">
+            <a href="#projects" class="btn btn-solid-light btn-lg btn-gloss">
+              <span>Loyihalarim</span>
+              <i class="fa-solid fa-grid-2 ms-2"></i>
+            </a>
+            <a href="#contact" class="btn btn-ghost-light btn-lg btn-gloss">
+              <span>Bog'lanish</span>
+              <i class="fa-regular fa-paper-plane ms-2"></i>
+            </a>
+          </div>
+
+          <div class="hero-social-row d-flex justify-content-center gap-3 mt-5 reveal-hero">
+            <a href="https://github.com/ubaydullo111" target="_blank" rel="noopener" class="icon-circle" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://t.me/ONYXBEK" target="_blank" rel="noopener" class="icon-circle" aria-label="Telegram">
+              <i class="fa-brands fa-telegram"></i>
+            </a>
+            <a href="https://instagram.com/nephix.uzb" target="_blank" rel="noopener" class="icon-circle" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="mailto:nephix111@gmail.com" class="icon-circle" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       3. MEN HAQIMDA (ABOUT) BO'LIMI
+  ========================================================= -->
+  <section id="about" class="section-space">
+    <div class="container">
+      <div class="heading-block text-center reveal-box">
+        <span class="heading-kicker">Ma'lumot</span>
+        <h2 class="heading-main line-grow">Men haqimda</h2>
+      </div>
+
+      <div class="row g-4 align-items-start mt-3">
+        <!-- Chap ustun: Biografiya matnlari -->
+        <div class="col-lg-6 reveal-box">
+          <div class="panel-card h-100">
+            <h3 class="panel-title mb-3">Toza kod, aniqlik va foydalanuvchiga qulay interfeys</h3>
+            <p class="panel-text mb-3">
+              Men Ubaydullo Ubaydullayev — veb-interfeyslar yaratish, maketlarni jonlantirish va interaktiv veb-saytlar ishlab chiqish bilan shug'ullanaman. Har bir loyihada sahifa tezligi, vizual muvozanat va foydalanuvchi tajribasiga alohida e'tibor qarataman.
+            </p>
+            <p class="panel-text mb-4">
+              HTML5, CSS3, JavaScript, jQuery, Bootstrap 5 va Owl Carousel yordamida bizneslar, brendlar va shaxsiy loyihalar uchun ishonchli hamda moslashuvchan yechimlar tayyorlayman. Yangi g'oyalar va zamonaviy veb-texnologiyalar bilan ishlash doimo ilhom beradi.
+            </p>
+
+            <!-- Hisoblagichlar -->
+            <div class="row g-3">
+              <div class="col-4">
+                <div class="stat-box">
+                  <div class="stat-val"><span class="counter-num" data-target="15">0</span>+</div>
+                  <div class="stat-name">Loyihalar soni</div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="stat-box">
+                  <div class="stat-val"><span class="counter-num" data-target="2">0</span>+</div>
+                  <div class="stat-name">Tajriba yili</div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="stat-box">
+                  <div class="stat-val"><span class="counter-num" data-target="10">0</span>+</div>
+                  <div class="stat-name">Mijozlar</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- O'ng ustun: Shaxsiy ma'lumotlar ro'yxati -->
+        <div class="col-lg-6 reveal-box">
+          <div class="panel-card h-100">
+            <h3 class="panel-title mb-4">Shaxsiy ma'lumotlar</h3>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="meta-tile">
+                  <span class="meta-key">Ism</span>
+                  <strong class="meta-val">Ubaydullo Ubaydullayev</strong>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="meta-tile">
+                  <span class="meta-key">Yosh</span>
+                  <strong class="meta-val">20 yosh</strong>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="meta-tile">
+                  <span class="meta-key">Shahar</span>
+                  <strong class="meta-val">Toshkent, O'zbekiston</strong>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="meta-tile">
+                  <span class="meta-key">Email</span>
+                  <strong class="meta-val">nephix111@gmail.com</strong>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="meta-tile">
+                  <span class="meta-key">Telefon</span>
+                  <strong class="meta-val">+998 91 484 50 51</strong>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="meta-tile">
+                  <span class="meta-key">Yo'nalish</span>
+                  <strong class="meta-val">Web / Frontend Developer</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       4. KO'NIKMALAR (SKILLS) BO'LIMI
+  ========================================================= -->
+  <section id="skills" class="section-space section-surface">
+    <div class="container">
+      <div class="heading-block text-center reveal-box">
+        <span class="heading-kicker">Imkoniyatlar</span>
+        <h2 class="heading-main line-grow">Ko'nikmalar</h2>
+      </div>
+
+      <div class="row g-4 mt-3">
+        <div class="col-md-6 col-lg-3 reveal-box">
+          <div class="skill-box tilt-panel">
+            <div class="skill-head">
+              <span class="skill-ico"><i class="fa-brands fa-html5"></i></span>
+              <span class="skill-score">95%</span>
+            </div>
+            <h3 class="skill-title">HTML</h3>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="95%"></div></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 reveal-box">
+          <div class="skill-box tilt-panel">
+            <div class="skill-head">
+              <span class="skill-ico"><i class="fa-brands fa-css3-alt"></i></span>
+              <span class="skill-score">92%</span>
+            </div>
+            <h3 class="skill-title">CSS</h3>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="92%"></div></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 reveal-box">
+          <div class="skill-box tilt-panel">
+            <div class="skill-head">
+              <span class="skill-ico"><i class="fa-brands fa-js"></i></span>
+              <span class="skill-score">85%</span>
+            </div>
+            <h3 class="skill-title">JavaScript</h3>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="85%"></div></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 reveal-box">
+          <div class="skill-box tilt-panel">
+            <div class="skill-head">
+              <span class="skill-ico"><i class="fa-solid fa-code"></i></span>
+              <span class="skill-score">88%</span>
+            </div>
+            <h3 class="skill-title">jQuery</h3>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="88%"></div></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 reveal-box">
+          <div class="skill-box tilt-panel">
+            <div class="skill-head">
+              <span class="skill-ico"><i class="fa-brands fa-bootstrap"></i></span>
+              <span class="skill-score">94%</span>
+            </div>
+            <h3 class="skill-title">Bootstrap</h3>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="94%"></div></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 reveal-box">
+          <div class="skill-box tilt-panel">
+            <div class="skill-head">
+              <span class="skill-ico"><i class="fa-solid fa-sliders"></i></span>
+              <span class="skill-score">90%</span>
+            </div>
+            <h3 class="skill-title">Owl Carousel</h3>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90%"></div></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 reveal-box">
+          <div class="skill-box tilt-panel">
+            <div class="skill-head">
+              <span class="skill-ico"><i class="fa-brands fa-git-alt"></i></span>
+              <span class="skill-score">86%</span>
+            </div>
+            <h3 class="skill-title">Git/GitHub</h3>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="86%"></div></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 reveal-box">
+          <div class="skill-box tilt-panel">
+            <div class="skill-head">
+              <span class="skill-ico"><i class="fa-solid fa-mobile-screen"></i></span>
+              <span class="skill-score">96%</span>
+            </div>
+            <h3 class="skill-title">Responsive Design</h3>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="96%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       5. LOYIHALAR (PROJECTS) — OWL CAROUSEL
+  ========================================================= -->
+  <section id="projects" class="section-space">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5 reveal-box">
+        <div class="heading-block mb-3 mb-md-0">
+          <span class="heading-kicker">Ishlar namunalari</span>
+          <h2 class="heading-main line-grow">Loyihalarim</h2>
+        </div>
+
+        <div class="slider-controls d-flex gap-2">
+          <button type="button" class="slider-arrow prev-slide" aria-label="Oldingi loyiha">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button type="button" class="slider-arrow next-slide" aria-label="Keyingi loyiha">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="owl-carousel owl-theme portfolio-carousel reveal-box">
+        <!-- 1. BMW sayt -->
+        <article class="work-card">
+          <div class="work-media">
+            <!-- RASM: BMW sayti rasmi (800x500 px, 16:10) -->
+            <img src="images/project-bmw.jpg" alt="BMW sayt loyihasi" class="work-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="work-placeholder">
+              <i class="fa-solid fa-car"></i>
+              <span>BMW SAYT </span>
+            </div>
+          </div>
+          <div class="work-content">
+            <div class="work-badges">
+              <span>HTML5</span><span>CSS3</span><span>Bootstrap</span><span>JS</span>
+            </div>
+            <h3 class="work-title">BMW sayt</h3>
+            <p class="work-text">BMW avtomobil brendi uchun zamonaviy vizual uslub, modellarga bag'ishlangan bloklar va moslashuvchan sahifa tuzilmasiga ega veb-sayt.</p>
+            <div class="work-actions">
+              <a href="https://bmwubaydullo.netlify.app" target="_blank" rel="noopener" class="btn btn-solid-light btn-sm btn-gloss">
+                <span>Saytni ko'rish</span><i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+              </a>
+              <a href="https://github.com/ubaydullo111" target="_blank" rel="noopener" class="btn btn-ghost-light btn-sm">
+                <i class="fa-brands fa-github me-1"></i><span>Kod</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Fast food sayt -->
+        <article class="work-card">
+          <div class="work-media">
+            <!-- RASM: Fast food sayti rasmi (800x500 px, 16:10) -->
+            <img src="images/project-fastfood.jpg" alt="Fast food sayt loyihasi" class="work-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="work-placeholder">
+              <i class="fa-solid fa-burger"></i>
+              <span>FAST FOOD SAYT</span>
+            </div>
+          </div>
+          <div class="work-content">
+            <div class="work-badges">
+              <span>HTML5</span><span>CSS3</span><span>jQuery</span><span>Responsive</span>
+            </div>
+            <h3 class="work-title">Fast food sayt</h3>
+            <p class="work-text">Tezkor ovqatlanish restoranlari uchun menyu taqdimoti, jozibador taom kartochkalari va qulay navigatsiyaga ega interaktiv veb-sayt.</p>
+            <div class="work-actions">
+              <a href="https://ubaydullofastfud.netlify.app" target="_blank" rel="noopener" class="btn btn-solid-light btn-sm btn-gloss">
+                <span>Saytni ko'rish</span><i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+              </a>
+              <a href="https://github.com/ubaydullo111" target="_blank" rel="noopener" class="btn btn-ghost-light btn-sm">
+                <i class="fa-brands fa-github me-1"></i><span>Kod</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Appl sayt -->
+        <article class="work-card">
+          <div class="work-media">
+            <!-- RASM: Appl sayti rasmi (800x500 px, 16:10) -->
+            <img src="images/project-apple.jpg" alt="Appl sayt loyihasi" class="work-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="work-placeholder">
+              <i class="fa-brands fa-apple"></i>
+              <span>APPLE SAYT</span>
+            </div>
+          </div>
+          <div class="work-content">
+            <div class="work-badges">
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>UI</span>
+            </div>
+            <h3 class="work-title">Apple sayt</h3>
+            <p class="work-text">Minimalistik estetika, aniq tipografiya va mahsulotlar vitrinasi uyg'unlashgan zamonaviy texnologik veb-loyiha.</p>
+            <div class="work-actions">
+              <a href="https://ubaydulloappl.netlify.app" target="_blank" rel="noopener" class="btn btn-solid-light btn-sm btn-gloss">
+                <span>Saytni ko'rish</span><i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+              </a>
+              <a href="https://github.com/ubaydullo111" target="_blank" rel="noopener" class="btn btn-ghost-light btn-sm">
+                <i class="fa-brands fa-github me-1"></i><span>Kod</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Uzum market clone -->
+        <article class="work-card">
+          <div class="work-media">
+            <!-- RASM: Uzum market clone rasmi (800x500 px, 16:10) -->
+            <img src="images/project-uzum.jpg" alt="Uzum market clone loyihasi" class="work-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="work-placeholder">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <span>UZUM MARKET CLONE</span>
+            </div>
+          </div>
+          <div class="work-content">
+            <div class="work-badges">
+              <span>Web App</span><span>E-Commerce</span><span>Responsive</span><span>JS</span>
+            </div>
+            <h3 class="work-title">Uzum market clone</h3>
+            <p class="work-text">Onlayn marketpleys interfeysi, mahsulotlar katalogi va foydalanuvchiga yo'naltirilgan savdo sahifasi ko'rinishiga ega veb-ilova kloni.</p>
+            <div class="work-actions">
+              <a href="https://ubaydullohuzum.lovable.app" target="_blank" rel="noopener" class="btn btn-solid-light btn-sm btn-gloss">
+                <span>Saytni ko'rish</span><i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+              </a>
+              <a href="https://github.com/ubaydullo111" target="_blank" rel="noopener" class="btn btn-ghost-light btn-sm">
+                <i class="fa-brands fa-github me-1"></i><span>Kod</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       6. XIZMATLAR VA TAJRIBA (TIMELINE)
+  ========================================================= -->
+  <section id="timeline-section" class="section-space section-surface">
+    <div class="container">
+      <div class="heading-block text-center reveal-box">
+        <span class="heading-kicker">Jarayon</span>
+        <h2 class="heading-main line-grow">Xizmatlar va Tajriba</h2>
+      </div>
+
+      <div class="row g-4 mt-3">
+        <div class="col-lg-6 reveal-box">
+          <h3 class="sub-heading mb-4">Xizmatlar</h3>
+          <div class="track-list">
+            <div class="track-node">
+              <span class="node-tag">Xizmat 01</span>
+              <h4>Landing Page va Veb-sayt yaratish</h4>
+              <p>Biznes, xizmat yoki shaxsiy brend uchun zamonaviy, tezkor va maqsadli harakatga chorlovchi veb-saytlar ishlab chiqish.</p>
+            </div>
+            <div class="track-node">
+              <span class="node-tag">Xizmat 02</span>
+              <h4>Maketni kodga o'tkazish va moslashtirish</h4>
+              <p>Tayyor dizayn g'oyalarini HTML5, CSS3, Bootstrap 5 va JavaScript yordamida barcha ekran o'lchamlariga mos holda kodlash.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 reveal-box">
+          <h3 class="sub-heading mb-4">Tajriba</h3>
+          <div class="track-list">
+            <div class="track-node">
+              <span class="node-tag">2025 — Hozir</span>
+              <h4>Frontend / Web Dasturchi (Frilans)</h4>
+              <p>Turli yo'nalishdagi veb-saytlar, katalog sahifalari va shaxsiy portfoliolarni noldan tayyorlash hamda optimallashtirish.</p>
+            </div>
+            <div class="track-node">
+              <span class="node-tag">2023 — 2025</span>
+              <h4>Amaliy Loyihalar va Klon Saytlar</h4>
+              <p>HTML, CSS, JavaScript, jQuery va Owl Carousel texnologiyalarida real interfeyslar va klon loyihalar ustida amaliy ishlash.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       7. ALOQA (CONTACT) BO'LIMI
+  ========================================================= -->
+  <section id="contact" class="section-space">
+    <div class="container">
+      <div class="heading-block text-center reveal-box">
+        <span class="heading-kicker">Murojaat</span>
+        <h2 class="heading-main line-grow">Aloqa</h2>
+      </div>
+
+      <div class="row g-4 mt-3">
+        <div class="col-lg-5 reveal-box">
+          <div class="d-flex flex-column gap-3">
+            <a href="tel:+998914845051" class="channel-card">
+              <div class="channel-ico"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <span class="channel-label">Telefon</span>
+                <strong class="channel-val">+998 91 484 50 51</strong>
+              </div>
+            </a>
+
+            <a href="mailto:nephix111@gmail.com" class="channel-card">
+              <div class="channel-ico"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <span class="channel-label">Email</span>
+                <strong class="channel-val">nephix111@gmail.com</strong>
+              </div>
+            </a>
+
+            <a href="https://t.me/ONYXBEK" target="_blank" rel="noopener" class="channel-card">
+              <div class="channel-ico"><i class="fa-brands fa-telegram"></i></div>
+              <div>
+                <span class="channel-label">Telegram</span>
+                <strong class="channel-val">https://t.me/ONYXBEK</strong>
+              </div>
+            </a>
+
+            <a href="https://instagram.com/nephix.uzb" target="_blank" rel="noopener" class="channel-card">
+              <div class="channel-ico"><i class="fa-brands fa-instagram"></i></div>
+              <div>
+                <span class="channel-label">Instagram</span>
+                <strong class="channel-val">https://instagram.com/nephix.uzb</strong>
+              </div>
+            </a>
+
+            <a href="https://github.com/ubaydullo111" target="_blank" rel="noopener" class="channel-card">
+              <div class="channel-ico"><i class="fa-brands fa-github"></i></div>
+              <div>
+                <span class="channel-label">GitHub</span>
+                <strong class="channel-val">https://github.com/ubaydullo111</strong>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-7 reveal-box">
+          <div class="panel-card">
+            <h3 class="panel-title mb-4">Xabar yuborish</h3>
+            <form id="portfolioContactForm" novalidate>
+              <div class="mb-3">
+                <label for="userName" class="form-label">Ism *</label>
+                <input type="text" class="form-control field-dark" id="userName" placeholder="Ismingiz" required>
+                <div class="invalid-feedback">Ismingizni kiriting.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="userEmail" class="form-label">Email *</label>
+                <input type="email" class="form-control field-dark" id="userEmail" placeholder="email@manzil.uz" required>
+                <div class="invalid-feedback">To'g'ri email manzilini kiriting.</div>
+              </div>
+
+              <div class="mb-4">
+                <label for="userMessage" class="form-label">Xabar *</label>
+                <textarea class="form-control field-dark" id="userMessage" rows="5" placeholder="Xabaringizni yozing..." required></textarea>
+                <div class="invalid-feedback">Xabar matnini kiriting.</div>
+              </div>
+
+              <button type="submit" class="btn btn-solid-light btn-lg w-100 btn-gloss">
+                <span>Yuborish</span>
+                <i class="fa-solid fa-paper-plane ms-2"></i>
+              </button>
+
+              <div id="contactSuccessMsg" class="alert msg-success mt-3 d-none" role="alert">
+                <i class="fa-solid fa-check-circle me-2"></i>
+                <span>Xabaringiz yuborildi. Tez orada javob qaytaraman!</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       8. FOOTER
+  ========================================================= -->
+  <footer class="footer-area">
+    <div class="container">
+      <div class="row align-items-center gy-3">
+        <div class="col-md-4 text-center text-md-start">
+          <a href="#home" class="nav-brand"><span class="brand-mark">/</span> Ubaydullo</a>
+        </div>
+
+        <div class="col-md-4 text-center">
+          <div class="d-inline-flex gap-3">
+            <a href="https://github.com/ubaydullo111" target="_blank" rel="noopener" class="icon-circle" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://t.me/ONYXBEK" target="_blank" rel="noopener" class="icon-circle" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://instagram.com/nephix.uzb" target="_blank" rel="noopener" class="icon-circle" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:nephix111@gmail.com" class="icon-circle" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-4 text-center text-md-end">
+          <p class="footer-copy mb-0">&copy; <span id="yearNow"></span> Ubaydullo Ubaydullayev</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Tepaga qaytish tugmasi -->
+  <button type="button" id="scrollTopBtn" class="scroll-top-btn" aria-label="Tepaga qaytish">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- =========================================================
+       JAVASCRIPT KUTUBXONALAR VA FAYL
+  ========================================================= -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="script.js"></script>
+</body>
+</html>
